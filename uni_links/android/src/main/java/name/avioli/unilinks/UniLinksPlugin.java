@@ -114,6 +114,10 @@ public class UniLinksPlugin
             result.success(initialLink);
         } else if (call.method.equals("getLatestLink")) {
             result.success(latestLink);
+        } else if (call.method.equals("clearDeepLinkCache")) {
+            initialIntent = false;
+            initialLink = null;
+            latestLink = null;
         } else {
             result.notImplemented();
         }

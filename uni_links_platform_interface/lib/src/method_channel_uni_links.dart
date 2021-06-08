@@ -10,6 +10,10 @@ class MethodChannelUniLinks extends UniLinksPlatform {
       _mChannel.invokeMethod<String?>('getInitialLink');
 
   @override
+  Future<void> clearDeepLinkCache() =>
+      _mChannel.invokeMethod<void>('clearDeepLinkCache');
+
+  @override
   late final Stream<String?> linkStream = _eChannel
       .receiveBroadcastStream()
       .map<String?>((dynamic link) => link as String?);

@@ -41,6 +41,10 @@ late final uriLinkStream = linkStream.transform<Uri?>(
   ),
 );
 
+/// Sets to null the variables related to the links in native code
+FutureOr<void> clearDeepLinkCache() =>
+    UniLinksPlatform.instance.clearDeepLinkCache();
+
 /// A broadcast stream for receiving incoming link change events.
 ///
 /// The [Stream] emits opened links as [String]s.

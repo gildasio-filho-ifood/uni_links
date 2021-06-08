@@ -80,6 +80,9 @@ static id _instance;
     result(self.initialLink);
     // } else if ([@"getLatestLink" isEqualToString:call.method]) {
     //     result(self.latestLink);
+  } else if ([@"clearDeepLinkCache" isEqualToString:call.method]) {
+   	self.initialLink = nil;
+    _latestLink = nil;
   } else {
     result(FlutterMethodNotImplemented);
   }

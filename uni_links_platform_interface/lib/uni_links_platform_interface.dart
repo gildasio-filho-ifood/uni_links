@@ -38,6 +38,12 @@ abstract class UniLinksPlatform extends PlatformInterface {
   Future<String?> getInitialLink() => throw UnimplementedError(
       'getInitialLink() has not been implemented on the current platform.');
 
+  /// Sets to null the variables related to the links in native code
+  ///
+  /// NOTE: base code found in [MethodChannelUniLinks.clearDeepLinkCache]
+  Future<void> clearDeepLinkCache() => throw UnimplementedError(
+      'clearDeepLinkCache() has not been implemented on the current platform.');
+
   /// A broadcast stream for receiving incoming link change events.
   ///
   /// The [Stream] emits opened links as [String]s.
